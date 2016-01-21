@@ -1,9 +1,9 @@
 
 /**
- * Write a description of WordPlay here.
+ * plays around with diffrent posiblity of character combination.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Aida) 
+ * @version (Jan, 2016)
  */
 public class WordPlay {
    public Boolean isVowel(char ch){

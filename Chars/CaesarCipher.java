@@ -1,11 +1,13 @@
 
 /**
- * Write a description of CaesarCipher here.
+ * Ecrypts text from a file using one/two keys
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Aida) 
+ * @version (Jan, 2016)
  */
+import edu.duke.*;
 public class CaesarCipher {
+    
     public String encrypt(String input, int key){
        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
        String shifted = alphabet.substring(key)+ alphabet.substring(0,key);
@@ -33,10 +35,10 @@ public class CaesarCipher {
        return sb.toString();
     }
     public void testCaesar(){
-     //  FileResource fr = new FileResource();
-     //  String message = fr.asString();
-     String encrypted = encrypt("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!", 15);
-     System.out.println(encrypted);
+      FileResource fr = new FileResource();
+      String encrypted = encrypt(fr.asString(), 15);
+     // String encrypted = encrypt("Can you imagine life WITHOUT the internet AND computers in your pocket?", 15);
+      System.out.println(encrypted);
     }
     
     public String encryptTwoKeys(String input, int key1, int key2){
@@ -74,9 +76,9 @@ public class CaesarCipher {
        return sb.toString();
     }
     public void testCaesarTwoKeys(){
-      // FileResource fr = new FileResource();
-       //String message = fr.asString();
-       String encrypted = encryptTwoKeys("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!", 8, 21);
+       FileResource fr = new FileResource();
+       String encrypted = encryptTwoKeys(fr.asString(),23,2);
+    // String encrypted = encryptTwoKeys("Can you imagine life WITHOUT the internet AND computers in your pocket?", 21, 8);
        System.out.println(encrypted);
     }
 
